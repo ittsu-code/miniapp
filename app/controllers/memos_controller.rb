@@ -60,7 +60,7 @@ class MemosController < ApplicationController
     end
   end
 
-  # DELETE /memos/1
+  # DELEtTE /memos/1
   # DELETE /memos/1.json
   def destroy
     @memo.destroy
