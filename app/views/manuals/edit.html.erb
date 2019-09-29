@@ -1,0 +1,10 @@
+<%= render partial: "./memos/header" %>
+<div class="container">
+<h4>Editing Manual</h4>
+
+<%= render 'form', manual: @manual %>
+<br>
+<%= link_to '確認', @manual %> 
+|
+<%= link_to '戻る', manuals_path %>
+</div>

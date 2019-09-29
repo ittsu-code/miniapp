@@ -1,0 +1,20 @@
+<h4>◆メモ欄◆</h4>
+<form onReset="return check()">
+<textarea id="Target" name="text" rows="20" cols="100"></textarea>
+<br>
+<button onclick="copyToClipboard()">Copy text</button>
+<input type="reset" value="Clear">
+</form>
+
+<script>
+        function copyToClipboard() {
+            const copyTarget = document.getElementById("Target");
+            copyTarget.select();
+            document.execCommand("Copy");
+            alert("コピーできました！");
+        }
+
+          function check() {
+        return confirm("入力内容をすべて削除します。\nよろしいですか？");
+    }
+</script>

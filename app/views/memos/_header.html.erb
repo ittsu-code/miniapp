@@ -1,0 +1,13 @@
+<nav class="#455a64 blue-grey darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Tech:Expert Manual</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to 'マニュアル', manuals_path %></li>
+        <li><%= link_to '周知一覧', memos_path %></li>
+        <li><% unless user_signed_in? %><%= link_to '管理者モード', user_session_path %><% end %></li>
+        <li><% if user_signed_in? %><%= button_to 'ログアウト', destroy_user_session_path, method: :delete , data: {confirm: 'ログアウトしますか？'} %><% end %></li>
+      </ul>
+    </div>
+  </nav>
+
+  
